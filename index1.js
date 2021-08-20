@@ -1,13 +1,9 @@
 const app = require('express')();
 const products= require('./data');
-
-const logger =(req,res,next)=>{
-    console.log(req.method);
-    console.log(req.url);
-    next();//t oexecute the next middleware
-
-}
+const logger=require('./logger');
+const authenticate =require('./authenticate');
 //logger is the middleware
+app.use(authenticate);//automatically uses the middleware for each path
 app.get('/',logger,(req,res)=>{
     console.log('this is home');
     res.send('Home');
