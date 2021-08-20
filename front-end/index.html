@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="94500449967-6vsd3ih7sksvpocse5u4gcn1na9oppts.apps.googleusercontent.com.apps.googleusercontent.com">
+    <link rel="stylesheet" href="style.css">
+    <title>ArtGallery</title>
+
+
+        <link rel="manifest" href="manifest.json" />
+<!--  
+    <link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
+    <link rel="apple-touch-icon" href="images/icons/icon-96x96.png" />
+    <link rel="apple-touch-icon" href="images/icons/icon-128x128.png" />
+    <link rel="apple-touch-icon" href="images/icons/icon-144x144.png" />
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png" />
+    <link rel="apple-touch-icon" href="images/icons/icon-192x192.png" />
+    <link rel="apple-touch-icon" href="images/icons/icon-384x384.png" />
+    <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+    <meta name="theme-color" content="#db4938" /> -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />  
+<link rel="apple-touch-icon" href="images/hello-icon-152.png">   
+<meta name="theme-color" content="white"/>  
+<meta name="apple-mobile-web-app-capable" content="yes">  
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+<meta name="apple-mobile-web-app-title" content="Hello World"> 
+<meta name="msapplication-TileImage" content="images/hello-icon-144.png">  
+<meta name="msapplication-TileColor" content="#FFFFFF">
+
+</head>
+<body>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div class="heading">
+        <h3>Dev's Art</h3>
+    
+        
+        <ul>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Build</li>
+        </ul>
+                <div class="cnt">
+                    <label class="label" for="check">
+                    <input type="checkbox" id="check"/>
+                    <div class="toggle"></div>
+                    <section><em>Dark mode</em></section>
+                    </label>
+                    
+                </div>
+                
+    </div>
+    <div id="controls">
+    <button id="left"><</button>
+    <div id="slide"></div>
+        <button id="right">></button>
+    </div>
+    <div class="container"></div>
+
+   
+    <script src="script.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</body>
+</html>
