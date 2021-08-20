@@ -47,5 +47,33 @@ app.get('/api/products/:productID/review/:reviewID',(req,res)=>{
 app.get('/api/v1/query',(req,res)=>{
     console.log(req.query);
     res.send('Success')
+});
+
+app.get('/api/v2/query',(req,res)=>{
+    const {search,limit}=req.query;
+    let newProducts = [...products];
+    if(search)
+    {
+        newProducts = newProducts.filter((prod)=>
+    {
+        return prod.name.startsWith(search);
+    });
+    }
+
+    if(limit)
+    {
+            newProducts = newProducts.slice(0,Number(limit));
+            
+    }
+
+    if(newProducts.length<1)
+    {
+        return res.status(200).json({success:true,data:[]})
+    }
+
+    res.status(200).json(newProducts);
+    res.send('hello world')
 })
+
+
 app.listen(3002,()=>{console.log('listening')})
