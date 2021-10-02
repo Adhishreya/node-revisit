@@ -11,4 +11,4 @@ app.use(express.json());//to handle incomming json data
 app.use('/person',people);
 app.use('/login',auths);//base route specified
 
-app.listen(3002,()=>{console.log('listening')})
+app.listen(5000,()=>{console.log(`listening ${process.env.PORT}`)})
