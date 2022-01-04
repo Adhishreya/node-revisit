@@ -1,17 +1,18 @@
 var mongoose = require('mongoose');
 var orders = mongoose.Schema({
-    orderId:
-    {
-        type:Number
-    },
-    user : 
-    {
-        type:mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-    },
+    // orderId:
+    // {
+    //     type:Number
+    // },
+    // user : 
+    // {
+    //     type:mongoose.Schema.Types.ObjectId,
+    //     ref: 'User'
+    // },
     products:
     {
-        type:Array
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'Cart'
     },
     deliveryDate:
     {
@@ -19,7 +20,7 @@ var orders = mongoose.Schema({
         required:true,
         default:Date.now()
     },
-    totalItems:
+    total:
     {
         type:Number,
         required:true,

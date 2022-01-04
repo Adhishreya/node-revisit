@@ -48,6 +48,11 @@ var products = mongoose.Schema({
     {   
         type:String,
         enum:['new','featured','best-picks']
+    },
+    category:
+    {
+        type:String,
+        required:true
     }
 });
 mongoose.model('Products',products)

@@ -9,6 +9,11 @@ var payment = mongoose.Schema({
     {
         type:String,
         required:true
+    },
+    staus:
+    {
+        type:String,
+        required:true
     }
 
 });
